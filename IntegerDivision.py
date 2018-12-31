@@ -75,7 +75,7 @@ class Division():
 
             #if a difference is less divizor
             if int(self.difference) < int(divizor):
-                #if divided after the first action 12/12
+                #if divided after the first action
                 if k == len(divided) and int(self.difference) == 0:
                     self.list_of_differences.append(self.difference)
                 elif k < len(divided):
@@ -83,7 +83,6 @@ class Division():
 
                     # if copy off two numbers then add a zero to part
                     count_zero = 0
-                    #print(k)
                     for l in range(k, len(divided)):
                         new_difference += divided[l]
                         if int(new_difference) >= int(divizor):
@@ -122,7 +121,7 @@ class Division():
                         else:
                             self.list_of_differences.append(str(int(self.difference[:j + 1])))
                             break
-                #a number of ділеться is with a remain
+                #partaking is with a remain
                 else:
                     if ',' not in self.list_of_part:
                         self.list_of_part.append(',')

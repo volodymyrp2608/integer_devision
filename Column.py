@@ -61,6 +61,7 @@ class Column():
                     self.result_string += differences[p] + '|' + divizor_with_lower_dash
                     print(product[p] + ' ' * int(len(differences[p]) - len(product[p])) + '|' + part)
                     self.result_string += product[p] + ' ' * int(len(differences[p]) - len(product[p])) + '|' + part
+
                     if int(list_of_differences[p]) > int(list_of_products[p]):
                         first_difference = list_of_differences[p]
                         first_difference_part = first_difference[:len(list_of_products[p])]
@@ -68,8 +69,9 @@ class Column():
                         if int(first_difference_part) < int(list_of_products[p]):
                             first_difference_part = first_difference[:len(list_of_products[p]) + 1]
                         dif_is_without_writing = str(abs(int(first_difference_part) - int(list_of_products[p])))
-                        next_element = len(list_of_products[p]) #f
-
+                        next_element = len(list_of_products[p])
+                        
+                        #determination of gap
                         if int(dif_is_without_writing) == 0:
                             boll = True
                             while boll:
